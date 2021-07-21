@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div><h1>INDIVIDUAL ANIMAL PAGE</h1></div>
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{ animal.name}} </h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ animal.region }}</h6>
+      <p class="card-text">{{ anmial .name }} weighs {{animal.weight}} lbs and stands {{animal.height}}ft tall</p>
+      <a href="{{url_for('site.updateIndividualAnimal', animal_id = animal.id)}}" class="card-link">Update</a>
+      <a href="{{url_for('site.deleteIndividualAnimal', animal_id=animal.id}}" class="card-link">Delete</a>
+    </div>
+  </div>
